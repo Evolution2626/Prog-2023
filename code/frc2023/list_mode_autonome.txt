@@ -1,0 +1,9 @@
+1=plus proche de la feeding station.
+2=millieu.
+3=a l'opposee du 1.
+
+Premier Code, 21pts, position 1. Placer l'objet de depart, aller sur le docking station en sortant de la zone de depart. encodeur
+Deuxieme Code, 15pts, position 3. Placer l'objet de depart, sortir, prendre un deuxieme objet et le placer.
+Troisieme code, 18pts, position 2. Placer l'objet de depart, aller sur le docking station directement
+Quatrieme Code, 21pts, position 1. Placer l'objet de depart, aller sur le docking station en sortant de la zone de depart. limelight rouge
+Cinquieme Code, 21pts, position 1. Placer l'objet de depart, aller sur le docking station en sortant de la zone de depart. limelight bleu

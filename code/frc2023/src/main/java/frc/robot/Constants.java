@@ -14,6 +14,25 @@ package frc.robot;
  */
 public final class Constants {
   public static class OperatorConstants {
+    public final int DeviceNumberAvantDroit = 6;
+    public final int DeviceNumberAvantGauche = 5;
+    public final int DeviceNumberArriereDroit = 7;
+    public final int DeviceNumberArriereGauche = 3;
+
+
+
+
     public static final int kDriverControllerPort = 0;
   }
+  public static class PCM{
+    public final int PISTON_BACK_LEFT_FORWARD = 0;
+    public final int PISTON_BACK_LEFT_REVERSE = 1;
+    public final int PISTON_BACK_RIGHT_FORWARD = 2;
+    public final int PISTON_BACK_RIGHT_REVERSE = 3;
+
+    public final int PISTON_FRONT_LEFT_FORWARD = 4;
+    public final int PISTON_FRONT_LEFT_REVERSE = 5;
+    public final int PISTON_FRONT_RIGHT_FORWARD = 6;
+    public final int PISTON_FRONT_RIGHT_REVERSE = 7;
+}
 }

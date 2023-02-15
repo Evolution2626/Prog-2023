@@ -8,10 +8,17 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.commands.LimelightCentrerCommand;
+import frc.robot.commands.OctocanumDrivetrainCommand;
+import frc.robot.subsystems.DriveTrainSwitch;
+import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.Limelight;
+import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.XboxController.Button;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
  * "declarative" paradigm, very little robot logic should actually be handled in the {@link Robot}
@@ -22,6 +29,11 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
 
+    private Limelight limelight;
+    private Drivetrain drivetrain;
+    private DriveTrainSwitch driveTrainSwitch;
+    private XboxController xboxController;
+
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
       new CommandXboxController(OperatorConstants.kDriverControllerPort);
@@ -29,6 +41,11 @@ public class RobotContainer {
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the trigger bindings
+    limelight = new Limelight();
+    drivetrain = new Drivetrain();
+    driveTrainSwitch = new DriveTrainSwitch();
+    xboxController = new XboxController(0);
+    drivetrain.setDefaultCommand(new OctocanumDrivetrainCommand(xboxController, driveTrainSwitch, drivetrain, limelight));
     configureBindings();
   }
 
@@ -45,6 +62,9 @@ public class RobotContainer {
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
     new Trigger(m_exampleSubsystem::exampleCondition)
         .onTrue(new ExampleCommand(m_exampleSubsystem));
+
+        new JoystickButton(xboxController, Button.kY.value).onTrue(new LimelightCentrerCommand(drivetrain,limelight, xboxController));
+
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.

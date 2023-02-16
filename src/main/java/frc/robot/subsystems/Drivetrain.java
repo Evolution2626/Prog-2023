@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.OperatorConstants;
 
 public class Drivetrain extends SubsystemBase {
-  OperatorConstants deviceNumber = new OperatorConstants();
+ 
 
   private TalonSRX avantgauche;
   private TalonSRX avantdroit;
@@ -27,10 +27,10 @@ public class Drivetrain extends SubsystemBase {
   public Drivetrain() {
 
 
-    avantgauche = new TalonSRX(deviceNumber.DeviceNumberAvantGauche);
-    avantdroit = new TalonSRX(deviceNumber.DeviceNumberAvantDroit);
-    arrieredroit = new TalonSRX(deviceNumber.DeviceNumberArriereDroit);
-    arrieregauche = new TalonSRX(deviceNumber.DeviceNumberArriereGauche);
+    avantgauche = new TalonSRX(OperatorConstants.DeviceNumberAvantGauche);
+    avantdroit = new TalonSRX(OperatorConstants.DeviceNumberAvantDroit);
+    arrieredroit = new TalonSRX(OperatorConstants.DeviceNumberArriereDroit);
+    arrieregauche = new TalonSRX(OperatorConstants.DeviceNumberArriereGauche);
 
     avantdroit.setInverted(true);
     avantgauche.setInverted(false);

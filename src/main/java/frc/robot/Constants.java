@@ -12,27 +12,30 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {
-  public static class OperatorConstants {
-    public final int DeviceNumberAvantDroit = 6;
-    public final int DeviceNumberAvantGauche = 5;
-    public final int DeviceNumberArriereDroit = 7;
-    public final int DeviceNumberArriereGauche = 3;
-
-
-
-
-    public static final int kDriverControllerPort = 0;
+public interface Constants {
+  public interface OperatorConstants {
+     int DeviceNumberAvantDroit = 6;
+     int DeviceNumberAvantGauche = 5;
+     int DeviceNumberArriereDroit = 7;
+     int DeviceNumberArriereGauche = 3;
+     int DeviceNumbermoteurGobbeur = 2;
+    int kDriverControllerPort = 0;
   }
-  public static class PCM{
-    public final int PISTON_BACK_LEFT_FORWARD = 0;
-    public final int PISTON_BACK_LEFT_REVERSE = 1;
-    public final int PISTON_BACK_RIGHT_FORWARD = 2;
-    public final int PISTON_BACK_RIGHT_REVERSE = 3;
+  public interface PCM{
+    int PISTON_BACK_LEFT_FORWARD = 0;
+    int PISTON_BACK_LEFT_REVERSE = 1;
+    int PISTON_BACK_RIGHT_FORWARD = 2;
+    int PISTON_BACK_RIGHT_REVERSE = 3;
 
-    public final int PISTON_FRONT_LEFT_FORWARD = 4;
-    public final int PISTON_FRONT_LEFT_REVERSE = 5;
-    public final int PISTON_FRONT_RIGHT_FORWARD = 6;
-    public final int PISTON_FRONT_RIGHT_REVERSE = 7;
+
+    int PISTON_FRONT_LEFT_FORWARD = 4;
+    int PISTON_FRONT_LEFT_REVERSE = 5;
+    int PISTON_FRONT_RIGHT_FORWARD = 6;
+    int PISTON_FRONT_RIGHT_REVERSE = 7;
+
+    int PISTON_PINCE_FORWARD = 0;
+    int PISTON_PINCE_REVERSE = 1;
+
+
 }
 }

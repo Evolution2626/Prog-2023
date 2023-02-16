@@ -10,7 +10,6 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.PCM;
 
 public class DriveTrainSwitch extends SubsystemBase {
-  PCM pcm = new PCM();
   private DoubleSolenoid avantgauche;
   private DoubleSolenoid avantdroit;
   private DoubleSolenoid arrieregauche;
@@ -20,10 +19,10 @@ public class DriveTrainSwitch extends SubsystemBase {
   /** Creates a new DriveTrainSwitch. */
   public DriveTrainSwitch() {
 
-    avantgauche = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, pcm.PISTON_FRONT_LEFT_FORWARD, pcm.PISTON_FRONT_LEFT_REVERSE);
-    avantdroit = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, pcm.PISTON_FRONT_RIGHT_FORWARD, pcm.PISTON_FRONT_RIGHT_REVERSE);
-    arrieredroit = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, pcm.PISTON_BACK_RIGHT_FORWARD, pcm.PISTON_BACK_RIGHT_REVERSE);
-    arrieregauche = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, pcm.PISTON_BACK_LEFT_FORWARD, pcm.PISTON_BACK_LEFT_REVERSE);
+    avantgauche = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, PCM.PISTON_FRONT_LEFT_FORWARD, PCM.PISTON_FRONT_LEFT_REVERSE);
+    avantdroit = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, PCM.PISTON_FRONT_RIGHT_FORWARD, PCM.PISTON_FRONT_RIGHT_REVERSE);
+    arrieredroit = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, PCM.PISTON_BACK_RIGHT_FORWARD, PCM.PISTON_BACK_RIGHT_REVERSE);
+    arrieregauche = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, PCM.PISTON_BACK_LEFT_FORWARD, PCM.PISTON_BACK_LEFT_REVERSE);
   }
 
   public void ActivateOctocanum() {

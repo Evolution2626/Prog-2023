@@ -39,7 +39,7 @@ public void pinceOuvert() {
 
 }
 
-public void serMoteurSpeed(double speed) {
+public void setMoteurSpeed(double speed) {
 
   moteurGobbeur.set(TalonSRXControlMode.PercentOutput,speed);
 

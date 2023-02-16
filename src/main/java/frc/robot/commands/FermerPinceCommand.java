@@ -25,4 +25,7 @@ public class FermerPinceCommand extends InstantCommand {
   public void initialize() {
     pince.pinceFerme();
   }
+
+  public static void pinceFerme() {
+  }
 }

@@ -21,4 +21,7 @@ public class OuvertPinceCommand extends InstantCommand {
   public void initialize() {
     pince.pinceOuvert();
   }
+
+  public static void pinceOuvert() {
+  }
 }
